@@ -29,8 +29,9 @@ namespace CIS174_TestCoreApp.Models
         [Url]
         [MinLength(7)]
         public string Website { get; set; }
-        [ReadOnly(true)] //This did not stop me from editing the field, the field info was changed but it DID NOT change on reload
-        //[Editable(false)] //This did not stop me from editing the field, it did make the field info disappear on reload
+        //[EditableAttribute(false)]
+        //[ReadOnly(true)] //This did not stop me from editing the field, the field info was changed but it DID NOT change on reload
+        [Editable(false)] //This did not stop me from editing the field, it did make the field info disappear on reload
         public string School { get; set; }
     }
 }
